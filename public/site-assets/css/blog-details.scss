@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Ysabeau+SC:wght@1..1000&display=swap");
+$primary-color: #347cd0;
+$secondary-color: #e9eaea;
+$secondary-content-color: #7f8c8d;
+$gray-color: #3e3e3e;
+$black-color: #000;
+
+body {
+  background: url(../images/background1.jpg);
+  overflow-x: hidden;
+}
+.header-icon{
+  position: fixed;
+  z-index: 1000;
+  bottom: 15px;
+  right: 15px;
+  display: none;
+  .arrow-top{
+    padding: 10px 17px;
+    i{
+      font-size: 13px;
+    }
+  }
+
+  .whatsapp{
+    padding: 10px 14px;
+    i{
+      font-size: 17px;
+    }
+  }
+
+}
+// ///////////////////////////////////
+
+.navbar {
+  background-color: transparent !important;
+  display: flex;
+  position: relative;
+  z-index: 111;
+  align-items: center;
+  .btn-contact {
+    text-decoration: none;
+    color: $secondary-color;
+  }
+
+  .navbar-brand {
+    width: 30%;
+    position: relative;
+    z-index: 111;
+    img {
+      width: 30%;
+    }
+  }
+  .nav-link {
+    font-size: 15.8px;
+    position: relative;
+    z-index: 111;
+    margin-top: 2px;
+    margin-right: 15px;
+    font-family: sukar-black;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .navbar {
+    .navbar-brand {
+      width: 25%;
+      position: relative;
+      z-index: 111;
+      img {
+        width: 50%;
+      }
+    }
+    .nav-link {
+      font-size: 15.8px;
+      position: relative;
+      z-index: 111;
+      margin-top: 2px;
+      margin-right: 15px;
+      font-family: sukar-black;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    .navbar-brand {
+      width: 50%;
+      position: relative;
+      z-index: 111;
+      img {
+        width: 35%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar {
+    .navbar-brand {
+      width: 50%;
+      position: relative;
+      z-index: 111;
+      img {
+        width: 50%;
+        margin-bottom: 10px;
+      }
+    }
+    .nav-link {
+      font-size: 15px;
+      margin-top: 2px;
+      font-family: sukar-black;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar {
+    .navbar-brand {
+      width: 60%;
+      position: relative;
+      z-index: 111;
+      img {
+        width: 50%;
+      }
+    }
+  }
+}
+
+
+
+.blog {
+  .content-blog {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: $primary-color;
+      font-weight: bold;
+      font-family: sukar-black;
+    }
+    .text-muted {
+      margin-bottom: 15px;
+      font-size: 17px;
+      font-family: sukar-black;
+    }
+    img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+    }
+    .description-blog {
+      font-size: 1.1rem;
+      padding-top: 20px;
+    }
+    p {
+      font-size: 1.1rem;
+      color: $gray-color;
+    }
+    ul {
+      margin: 20px 0;
+      padding-left: 20px;
+      li {
+        margin-bottom: 10px;
+      }
+    }
+    .btn-back {
+      background-color: $primary-color;
+      color: $secondary-color;
+      &:hover {
+        background-color: $primary-color;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+
+// footer
+footer {
+    background-color: #347cd0;
+    a {
+      text-decoration: none;
+    }
+  
+    .text-titel {
+      font-weight: bold;
+      font-size: 20px;
+      color: #e9eaea;
+      font-family: sukar-black;
+    }
+    .icon {
+      display: flex;
+      align-items: center;
+      .text-reset {
+        i {
+          color: #e9eaea;
+        }
+      }
+    }
+  
+    .footer-data {
+      .logo {
+        width: 70%;
+        padding-bottom: 30px;
+      }
+      h6 {
+        // color: $black-color;
+        // color: #3e3e3e;
+        color: $secondary-color;
+        font-weight: bold;
+        font-size: 17px;
+        font-family: sukar-black;
+      }
+      .text-reset {
+        padding: 0;
+        margin: 0;
+      }
+      p {
+        color: $secondary-color;
+      }
+    }
+  
+    .footer-end {
+      color: $secondary-color;
+    }
+  }

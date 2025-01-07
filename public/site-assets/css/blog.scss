@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Ysabeau+SC:wght@1..1000&display=swap");
+$primary-color: #347cd0;
+$secondary-color: #e9eaea;
+$secondary-content-color: #7f8c8d;
+$gray-color: #3e3e3e;
+$black-color: #000;
+
+body {
+  overflow-x: hidden;
+}
+.header-icon{
+  position: fixed;
+  z-index: 1000;
+  bottom: 15px;
+  right: 15px;
+  display: none;
+  .arrow-top{
+    padding: 10px 17px;
+    i{
+      font-size: 13px;
+    }
+  }
+
+  .whatsapp{
+    padding: 10px 14px;
+    i{
+      font-size: 17px;
+    }
+  }
+
+}
+// ///////////////////////////////////
+
+.navbar {
+  background-color: transparent !important;
+  display: flex;
+  position: relative;
+  z-index: 111;
+  align-items: center;
+  .btn-contact {
+    text-decoration: none;
+    color: $secondary-color;
+  }
+
+  .navbar-brand {
+    width: 30%;
+    position: relative;
+    z-index: 111;
+    img {
+      width: 30%;
+    }
+  }
+  .nav-link {
+    font-size: 15.8px;
+    position: relative;
+    z-index: 111;
+    margin-top: 2px;
+    margin-right: 15px;
+    font-family: sukar-black;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .navbar {
+    .navbar-brand {
+      width: 25%;
+      position: relative;
+      z-index: 111;
+      img {
+        width: 50%;
+      }
+    }
+    .nav-link {
+      font-size: 15.8px;
+      position: relative;
+      z-index: 111;
+      margin-top: 2px;
+      margin-right: 15px;
+      font-family: sukar-black;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    .navbar-brand {
+      width: 50%;
+      position: relative;
+      z-index: 111;
+      img {
+        width: 35%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar {
+    .navbar-brand {
+      width: 50%;
+      position: relative;
+      z-index: 111;
+      img {
+        width: 50%;
+        margin-bottom: 10px;
+      }
+    }
+    .nav-link {
+      font-size: 15px;
+      margin-top: 2px;
+      font-family: sukar-black;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar {
+    .navbar-brand {
+      width: 60%;
+      position: relative;
+      z-index: 111;
+      img {
+        width: 50%;
+      }
+    }
+  }
+}
+.hero-page-content {
+  background: url(../images/back-header.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $primary-color;
+    opacity: 0.5;
+  }
+
+  .hero-info {
+    text-align: center;
+    img {
+      width: 22%;
+      position: relative;
+      z-index: 2;
+    }
+
+    h2 {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      font-size: 50px;
+      padding: 10px 0;
+      font-weight: bold;
+      font-family: sukar-black;
+      span {
+        color: $primary-color;
+      }
+    }
+    p {
+      color: #fff;
+      z-index: 22;
+      width: 80%;
+      margin: 0 auto 10px;
+      position: relative;
+      font-size: 19px;
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .hero-page-content {
+    .hero-info {
+      img {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-page-content {
+    .hero-info {
+      img {
+        width: 40%;
+      }
+
+      h2 {
+        font-size: 45px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-page-content {
+    .hero-info {
+      img {
+        width: 50%;
+      }
+
+      h2 {
+        font-size: 45px;
+      }
+      p {
+        font-size: 19px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-page-content {
+    .hero-info {
+      img {
+        width: 50%;
+      }
+
+      h2 {
+        font-size: 35px;
+      }
+      p {
+        font-size: 17px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+/* ----------------blog------------------- */
+
+.Blog {
+    padding: 50px 0;
+    .badge-custom {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      // background-color: rgb(244, 174, 50);
+      background-color: $primary-color;
+    }
+    .Blog-header {
+      text-align: center;
+      margin-bottom: -80px;
+      h1 {
+        color: $primary-color;
+        font-family: sukar-black;
+      }
+      p {
+        color: $secondary-content-color;
+      }
+    }
+  
+    .box {
+      .card {
+        margin-top: 3em;
+        border: none;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+  
+        img {
+          height: 200px;
+          object-fit: cover;
+        }
+  
+        .card-body {
+          img {
+            width: 40px;
+            height: 40px;
+          }
+  
+          small {
+            color: $gray-color;
+          }
+  
+          .text-muted {
+            margin-left: 0px;
+            color: $secondary-content-color;
+            font-family: sukar-black;
+          }
+  
+          .text-muted1 {
+            color: $secondary-content-color;
+            font-family: sukar-black;
+            letter-spacing: 0.5;
+            font-size: 14.5px;
+          }
+  
+          p {
+            color: $secondary-content-color;
+            font-size: 16px;
+          }
+  
+          h5 {
+            color: $black-color;
+            font-size: 1.3rem;
+            font-family: sukar-black;
+            margin: 15px 0 10px 0;
+          }
+  
+          .btn-read {
+            color: $primary-color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  
+// footer
+footer {
+    background-color: #347cd0;
+    a {
+      text-decoration: none;
+    }
+  
+    .text-titel {
+      font-weight: bold;
+      font-size: 20px;
+      color: #e9eaea;
+      font-family: sukar-black;
+    }
+    .icon {
+      display: flex;
+      align-items: center;
+      .text-reset {
+        i {
+          color: #e9eaea;
+        }
+      }
+    }
+  
+    .footer-data {
+      .logo {
+        width: 70%;
+        padding-bottom: 30px;
+      }
+      h6 {
+        // color: $black-color;
+        // color: #3e3e3e;
+        color: $secondary-color;
+        font-weight: bold;
+        font-size: 17px;
+        font-family: sukar-black;
+      }
+      .text-reset {
+        padding: 0;
+        margin: 0;
+      }
+      p {
+        color: $secondary-color;
+      }
+    }
+  
+    .footer-end {
+      color: $secondary-color;
+    }
+  }
+  
