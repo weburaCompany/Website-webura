@@ -56,6 +56,24 @@
     </li>
 
     <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFeedback"
+            aria-expanded="true" aria-controls="collapseFeedback">
+            <i class="fas fa-question"></i>
+            <span>Feedback</span>
+        </a>
+        <div id="collapseFeedback" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('admin.feedbacks.index') }}">Show All</a>
+                <a class="collapse-item" href="{{ route('admin.feedbacks.create') }}">Add New</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
     <!-- Sidebar Toggler (Sidebar) -->

@@ -239,7 +239,7 @@
     </script>
 
 
-    <script type="module" src="{{ asset('site-assets/js/app.js') }}"></script>
+    <script src="{{ asset('site-assets/js/app.js') }}"></script>
     <script src="{{ asset('site-assets/js/script-home.js') }}"></script>
     @yield('scripts')
 </body>
