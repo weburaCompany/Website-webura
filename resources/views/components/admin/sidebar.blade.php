@@ -22,6 +22,23 @@
     <!-- Divider -->
     <hr class="sidebar-divider">
 
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAdmin"
+            aria-expanded="true" aria-controls="collapseAdmin">
+            <i class="fas fa-user"></i>
+            <span>Admins</span>
+        </a>
+        <div id="collapseAdmin" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('admin.admins.index') }}">Show All</a>
+                <a class="collapse-item" href="{{ route('admin.admins.create') }}">Add New</a>
+            </div>
+        </div>
+    </li>
+
+    <hr class="sidebar-divider">
+
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProjects"
