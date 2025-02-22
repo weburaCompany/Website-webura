@@ -1,12 +1,17 @@
 @extends('site.master')
 @section('title', 'Projects | ' . env('APP_NAME'))
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('site-assets/css/project.css') }}">
+    <link rel="stylesheet" href="{{ asset('site-assets/css/project.css.map') }}">
+    <link rel="stylesheet" href="{{ asset('site-assets/css/project.scss') }}">
+@endsection
 
 @section('content')
 
 
     <div class="header-icon">
-        <a data-mdb-ripple-init class="btn btn-success whatsapp" href="https://api.whatsapp.com/send/?phone=970592228451" target="_blank"
-            role="button" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"><i
+        <a data-mdb-ripple-init class="btn btn-success whatsapp" href="https://api.whatsapp.com/send/?phone=970592228451"
+            target="_blank" role="button" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"><i
                 class="fa-brands fa-whatsapp"></i></a> <br>
 
 
@@ -135,7 +140,4 @@
         </div>
     </section>
 
-    @endsection
-
-
-
+@endsection

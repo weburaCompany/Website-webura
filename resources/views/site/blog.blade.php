@@ -1,10 +1,14 @@
 @extends('site.master')
 @section('title', 'Blog | ' . env('APP_NAME'))
 
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('site-assets/css/blog.css') }}">
+    <link rel="stylesheet" href="{{ asset('site-assets/css/blog.css.map') }}">
+    <link rel="stylesheet" href="{{ asset('site-assets/css/blog.scss') }}">
+@endsection
+
 
 @section('content')
-
-
     <section class="hero-page-content">
 
         <div class="overlay"></div>
@@ -44,38 +48,167 @@
         </div>
 
         <div class="container py-5">
+
+            
             <div class="row g-4">
-                @foreach ($blogs as $blog)
-                    <div class="col-sm-12 col-md-6 col-lg-4 box" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card">
-                            <div class="position-relative">
-                                <img src="{{ asset('site-assets/images/test-img2.jpg') }}" class="card-img-top"
-                                    alt="Meeting">
-                                <span class="badge badge-custom">SEO, Analytics</span>
+
+                <div class="col-sm-12 col-md-6 col-lg-4 box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card">
+                        <div class="position-relative">
+                            <img src="images/test-img2.jpg" class="card-img-top" alt="Meeting">
+                            <span class="badge badge-custom">SEO, Analytics</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="images/test-img2.jpg" class="rounded-circle small-avatar me-2" alt="Admin">
+                                <small class="text-muted me-2">Admin</small>
+                                <small class="text-muted1 ms-auto">
+                                    <i class="bi bi-calendar me-1"></i>
+                                    15 March 2020
+                                </small>
                             </div>
-                            <div class="card-body">
-                                <div class="d-flex align-items-center mb-2">
-                                    <img src="{{ asset('site-assets/images/test-img2.jpg') }}"
-                                        class="rounded-circle small-avatar me-2" alt="Admin">
-                                    <small class="text-muted me-2">Admin</small>
-                                    <small class="text-muted1 ms-auto">
-                                        <i class="bi bi-calendar me-1"></i>
-                                        15 March 2020
-                                    </small>
-                                </div>
-                                <h5 class="fw-bold">Holisticly promote enabled</h5>
-                                <p class="card-text">
-                                    Some quick example text to build on the card title and make up the bulk of the
-                                    card's content.
-                                </p>
-                                <a href="{{ route('webura.single-blog', $blog->id) }}" class="btn-read fw-bold">Read more &rarr;</a>
-                            </div>
+                            <h5 class="fw-bold">Holisticly promote enabled</h5>
+                            <p class="card-text">
+                                Some quick example text to build on the card title and make up the bulk of the
+                                card's content.
+                            </p>
+                            <a href="blog-details.html" class="btn-read fw-bold">Read more &rarr;</a>
                         </div>
                     </div>
-                @endforeach
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-4 box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card">
+                        <div class="position-relative">
+                            <img src="images/test-img2.jpg" class="card-img-top" alt="Meeting">
+                            <span class="badge badge-custom">SEO, Analytics</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="images/test-img2.jpg" class="rounded-circle small-avatar me-2" alt="Admin">
+                                <small class="text-muted me-2">Admin</small>
+                                <small class="text-muted1 ms-auto">
+                                    <i class="bi bi-calendar me-1"></i>
+                                    15 March 2020
+                                </small>
+                            </div>
+                            <h5 class="fw-bold">Holisticly promote enabled</h5>
+                            <p class="card-text">
+                                Some quick example text to build on the card title and make up the bulk of the
+                                card's content.
+                            </p>
+                            <a href="blog-details.html" class="btn-read fw-bold">Read more &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-4 box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card">
+                        <div class="position-relative">
+                            <img src="images/test-img2.jpg" class="card-img-top" alt="Teamwork">
+                            <span class="badge badge-custom">SEO, Marketing</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="images/test-img2.jpg" class="rounded-circle me-2" alt="Writer">
+                                <small class="text-muted">Writer</small>
+                                <small class="text-muted1 ms-auto">
+                                    <i class="bi bi-calendar"></i>
+                                    15 March 2020
+                                </small>
+                            </div>
+                            <h5 class="fw-bold">Holisticly promote enable</h5>
+                            <p class="card-text">
+                                Some quick example text to build on the card title and make up the bulk of the
+                                card's content.
+                            </p>
+                            <a href="blog-details.html" class="btn-read fw-bold">Read more &rarr;</a>
+                        </div>
+                    </div>
+                </div>
 
             </div>
+            <div class="row g-4">
+
+                <div class="col-sm-12 col-md-6 col-lg-4 box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card">
+                        <div class="position-relative">
+                            <img src="images/test-img2.jpg" class="card-img-top" alt="Meeting">
+                            <span class="badge badge-custom">SEO, Analytics</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="images/test-img2.jpg" class="rounded-circle small-avatar me-2" alt="Admin">
+                                <small class="text-muted me-2">Admin</small>
+                                <small class="text-muted1 ms-auto">
+                                    <i class="bi bi-calendar me-1"></i>
+                                    15 March 2020
+                                </small>
+                            </div>
+                            <h5 class="fw-bold">Holisticly promote enabled</h5>
+                            <p class="card-text">
+                                Some quick example text to build on the card title and make up the bulk of the
+                                card's content.
+                            </p>
+                            <a href="blog-details.html" class="btn-read fw-bold">Read more &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-4 box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card">
+                        <div class="position-relative">
+                            <img src="images/test-img2.jpg" class="card-img-top" alt="Meeting">
+                            <span class="badge badge-custom">SEO, Analytics</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="images/test-img2.jpg" class="rounded-circle small-avatar me-2" alt="Admin">
+                                <small class="text-muted me-2">Admin</small>
+                                <small class="text-muted1 ms-auto">
+                                    <i class="bi bi-calendar me-1"></i>
+                                    15 March 2020
+                                </small>
+                            </div>
+                            <h5 class="fw-bold">Holisticly promote enabled</h5>
+                            <p class="card-text">
+                                Some quick example text to build on the card title and make up the bulk of the
+                                card's content.
+                            </p>
+                            <a href="blog-details.html" class="btn-read fw-bold">Read more &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-4 box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card">
+                        <div class="position-relative">
+                            <img src="images/test-img2.jpg" class="card-img-top" alt="Teamwork">
+                            <span class="badge badge-custom">SEO, Marketing</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="images/test-img2.jpg" class="rounded-circle me-2" alt="Writer">
+                                <small class="text-muted">Writer</small>
+                                <small class="text-muted1 ms-auto">
+                                    <i class="bi bi-calendar"></i>
+                                    15 March 2020
+                                </small>
+                            </div>
+                            <h5 class="fw-bold">Holisticly promote enable</h5>
+                            <p class="card-text">
+                                Some quick example text to build on the card title and make up the bulk of the
+                                card's content.
+                            </p>
+                            <a href="blog-details.html" class="btn-read fw-bold">Read more &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
     </section>
+
 @endsection

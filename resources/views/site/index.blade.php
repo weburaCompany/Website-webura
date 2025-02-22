@@ -4,24 +4,24 @@
 @section('content')
 
     <!-- <header>
-            <div class="overlay"></div>
-            <div class="video-header">
-                <video src="video/2.mp4" muted loop autoplay></video>
-            </div>
-            <div class="header-data" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="500">
-                <div class="container">
-                    <h2>Welcome To <span>Webura</span></h2>
-                    <p>
-                        At Webura, we specialize in turning ideas into impactful results. From programming and
-                        design to marketing and advertising, we provide innovative solutions that help your business
-                        thrive Founded in 2022, Webura is a company built on the belief that great ideas deserve exceptional
-                        execution.
-                    </p>
-                    <a data-mdb-ripple-init class="btn btn-primary mt-2" href="#about" role="button">Let’s Collaborate</a>
+                <div class="overlay"></div>
+                <div class="video-header">
+                    <video src="video/2.mp4" muted loop autoplay></video>
                 </div>
-            </div>
-            </div>
-        </header> -->
+                <div class="header-data" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="500">
+                    <div class="container">
+                        <h2>Welcome To <span>Webura</span></h2>
+                        <p>
+                            At Webura, we specialize in turning ideas into impactful results. From programming and
+                            design to marketing and advertising, we provide innovative solutions that help your business
+                            thrive Founded in 2022, Webura is a company built on the belief that great ideas deserve exceptional
+                            execution.
+                        </p>
+                        <a data-mdb-ripple-init class="btn btn-primary mt-2" href="#about" role="button">Let’s Collaborate</a>
+                    </div>
+                </div>
+                </div>
+            </header> -->
 
     <header>
         <div class="overlay"></div>
@@ -138,7 +138,7 @@
                         </div>
                     </div>
 
-                    <button class="animated-button">
+                    <button class="animated-button" onclick="window.location.href='{{ route('webura.about-us') }}'">
                         <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
                             <path
                                 d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">

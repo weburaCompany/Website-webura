@@ -1,6 +1,12 @@
 @extends('site.master')
 @section('title', 'About Us | ' . env('APP_NAME'))
 
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('site-assets/css/about-us.css') }}">
+    <link rel="stylesheet" href="{{ asset('site-assets/css/about-us.css.map') }}">
+    <link rel="stylesheet" href="{{ asset('site-assets/css/about-us.scss') }}">
+@endsection
+
 @section('content')
 
     <section class="hero-page-content">
@@ -21,7 +27,8 @@
 
     <div class="header-icon">
         <a data-mdb-ripple-init class="btn btn-success whatsapp" href="https://api.whatsapp.com/send/?phone=970592228451"
-            target="_blank" role="button" data-aos="fade-down" data-aos-delay="100"><i class="fa-brands fa-whatsapp"></i></a>
+            target="_blank" role="button" data-aos="fade-down" data-aos-delay="100"><i
+                class="fa-brands fa-whatsapp"></i></a>
         <br>
 
 

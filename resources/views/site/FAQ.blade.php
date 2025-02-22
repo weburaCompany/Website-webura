@@ -1,5 +1,11 @@
 @extends('site.master')
 @section('title', 'FAQ | ' . env('APP_NAME'))
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('site-assets/css/fqa.css') }}">
+    <link rel="stylesheet" href="{{ asset('site-assets/css/fqa.css.map') }}">
+    <link rel="stylesheet" href="{{ asset('site-assets/css/fqa.scss') }}">
+
+@endsection
 
 @section('content')
 
