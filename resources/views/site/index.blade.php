@@ -4,24 +4,24 @@
 @section('content')
 
     <!-- <header>
-                <div class="overlay"></div>
-                <div class="video-header">
-                    <video src="video/2.mp4" muted loop autoplay></video>
-                </div>
-                <div class="header-data" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="500">
-                    <div class="container">
-                        <h2>Welcome To <span>Webura</span></h2>
-                        <p>
-                            At Webura, we specialize in turning ideas into impactful results. From programming and
-                            design to marketing and advertising, we provide innovative solutions that help your business
-                            thrive Founded in 2022, Webura is a company built on the belief that great ideas deserve exceptional
-                            execution.
-                        </p>
-                        <a data-mdb-ripple-init class="btn btn-primary mt-2" href="#about" role="button">Let’s Collaborate</a>
-                    </div>
-                </div>
-                </div>
-            </header> -->
+                                                            <div class="overlay"></div>
+                                                            <div class="video-header">
+                                                                <video src="video/2.mp4" muted loop autoplay></video>
+                                                            </div>
+                                                            <div class="header-data" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="500">
+                                                                <div class="container">
+                                                                    <h2>Welcome To <span>Webura</span></h2>
+                                                                    <p>
+                                                                        At Webura, we specialize in turning ideas into impactful results. From programming and
+                                                                        design to marketing and advertising, we provide innovative solutions that help your business
+                                                                        thrive Founded in 2022, Webura is a company built on the belief that great ideas deserve exceptional
+                                                                        execution.
+                                                                    </p>
+                                                                    <a data-mdb-ripple-init class="btn btn-primary mt-2" href="#about" role="button">Let’s Collaborate</a>
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                        </header> -->
 
     <header>
         <div class="overlay"></div>
@@ -185,7 +185,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="#" class="btn-read fw-bold">Discover more &rarr;</a>
+                            <a href="{{ route('webura.services') }}" class="btn-read fw-bold">Discover more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -199,7 +199,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="#" class="btn-read fw-bold">Discover more &rarr;</a>
+                            <a href="{{ route('webura.services') }}" class="btn-read fw-bold">Discover more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -213,7 +213,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="#" class="btn-read fw-bold">Discover more &rarr;</a>
+                            <a href="{{ route('webura.services') }}" class="btn-read fw-bold">Discover more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -228,7 +228,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="#" class="btn-read fw-bold">Discover more &rarr;</a>
+                            <a href="{{ route('webura.services') }}" class="btn-read fw-bold">Discover more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -242,7 +242,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="#" class="btn-read fw-bold">Discover more &rarr;</a>
+                            <a href="{{ route('webura.services') }}" class="btn-read fw-bold">Discover more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -256,7 +256,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="#" class="btn-read fw-bold">Discover more &rarr;</a>
+                            <a href="{{ route('webura.services') }}" class="btn-read fw-bold">Discover more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -270,7 +270,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="#" class="btn-read fw-bold">Discover more &rarr;</a>
+                            <a href="{{ route('webura.services') }}" class="btn-read fw-bold">Discover more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -284,7 +284,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="#" class="btn-read fw-bold">Discover more &rarr;</a>
+                            <a href="{{ route('webura.services') }}" class="btn-read fw-bold">Discover more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -453,12 +453,11 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="image mb-2">
-                        <img src="{{ asset('site-assets/images/test-img2.jpg') }}" alt="">
+                        <img src="{{ asset($bigProject->image) }}" alt="">
                         <div class="overlay-text text-center span">
-                            <h3>Personal Portfolio Website</h3>
-                            <p>A design for a personal website showcasing skills, past projects, and a professional
-                                resume
-                                in an appealing and interactive layout.
+                            <h3>{{ $bigProject->name }}</h3>
+                            <p>
+                                {!! $bigProject->description !!}
                             </p>
                         </div>
 
@@ -467,50 +466,22 @@
 
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-6 " data-aos="fade-up" data-aos-delay="200">
-                            <div class="image mb-4">
-                                <img src="{{ asset('site-assets/images/test-img2.jpg') }}" alt="">
-                                <div class="overlay-text text-center">
-                                    <h3>Restaurant Menu Page</h3>
-                                    <p>A travel blog design displaying travel experiences with img and details about
-                                        popular destinations.</p>
-                                </div>
-                            </div>
 
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6 " data-aos="fade-up" data-aos-delay="300">
-                            <div class="image mb-4">
-                                <img src="{{ asset('site-assets/images/test-img2.jpg') }}" alt="">
-                                <div class="overlay-text text-center">
-                                    <h3>Online Store Homepage</h3>
-                                    <p>A travel blog design displaying travel experiences with img and details about
-                                        popular destinations.</p>
+                        @foreach ($projects as $project)
+                            <div class="col-sm-12 col-md-6 col-lg-6 " data-aos="fade-up" data-aos-delay="200">
+                                <div class="image mb-4">
+                                    <img src="{{ asset($project->image) }}" alt="">
+                                    <div class="overlay-text text-center">
+                                        <h3>{{ $project->name }}</h3>
+                                        <p>{!! $project->description !!}</p>
+                                    </div>
                                 </div>
-                            </div>
 
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6 " data-aos="fade-up" data-aos-delay="400">
-                            <div class="image mb-4">
-                                <img src="{{ asset('site-assets/images/test-img2.jpg') }}" alt="">
-                                <div class="overlay-text text-center">
-                                    <h3>Travel Blog Website</h3>
-                                    <p>A travel blog design displaying travel experiences with img and details about
-                                        popular destinations.</p>
-                                </div>
                             </div>
+                        @endforeach
 
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6 " data-aos="fade-up" data-aos-delay="500">
-                            <div class="image mb-4">
-                                <img src="{{ asset('site-assets/images/test-img2.jpg') }}" alt="">
-                                <div class="overlay-text text-center">
-                                    <h3>Event Landing Page</h3>
-                                    <p>A travel blog design displaying travel experiences with img and details about
-                                        popular destinations. </p>
-                                </div>
-                            </div>
 
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -531,117 +502,43 @@
 
         <div class="container py-5">
             <div class="row g-4">
-
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 box" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card">
-                        <div class="position-relative">
-                            <img src="{{ asset('site-assets/images/test-img2.jpg') }}" class="card-img-top"
-                                alt="Meeting">
-                            <span class="badge badge-custom">SEO, Analytics</span>
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-2">
-                                <img src="{{ asset('site-assets/images/test-img2.jpg') }}"
-                                    class="rounded-circle small-avatar me-2" alt="Admin">
-                                <small class="text-muted me-2">Admin</small>
-                                <small class="text-muted1 ms-auto">
-                                    <i class="bi bi-calendar me-1"></i>
-                                    15 March 2020
-                                </small>
+                @php
+                    use Carbon\Carbon;
+                @endphp
+                @foreach ($blogs as $blog)
+                    @php
+                        $publishDate = Carbon::parse($blog->publish_date);
+                    @endphp
+                    @if ($publishDate->isPast())
+                        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 box" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card">
+                                <div class="position-relative">
+                                    <img src="{{ asset('site-assets/images/test-img2.jpg') }}" class="card-img-top"
+                                        alt="Meeting">
+                                    <span class="badge badge-custom">SEO, Analytics</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <img src="{{ asset('site-assets/images/test-img2.jpg') }}"
+                                            class="rounded-circle small-avatar me-2" alt="Admin">
+                                        <small class="text-muted me-2">Admin</small>
+                                        <small class="text-muted1 ms-auto">
+                                            <i class="bi bi-calendar me-1"></i>
+                                            {{ $blog->publish_date }}
+                                        </small>
+                                    </div>
+                                    <h5 class="fw-bold titel-blog">The Power of Social Media Marketing</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's content.
+                                    </p>
+                                    <a href="#" class="btn-read fw-bold">Read more &rarr;</a>
+                                </div>
                             </div>
-                            <h5 class="fw-bold titel-blog">The Power of Social Media Marketing</h5>
-                            <p class="card-text">
-                                Some quick example text to build on the card title and make up the bulk of the
-                                card's content.
-                            </p>
-                            <a href="#" class="btn-read fw-bold">Read more &rarr;</a>
                         </div>
-                    </div>
-                </div>
+                    @endif
+                @endforeach
 
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 box" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <div class="position-relative">
-                            <img src="{{ asset('site-assets/images/test-img2.jpg') }}" class="card-img-top"
-                                alt="Meeting">
-                            <span class="badge badge-custom">SEO, Analytics</span>
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-2">
-                                <img src="{{ asset('site-assets/images/test-img2.jpg') }}"
-                                    class="rounded-circle small-avatar me-2" alt="Admin">
-                                <small class="text-muted me-2">Admin</small>
-                                <small class="text-muted1 ms-auto">
-                                    <i class="bi bi-calendar me-1"></i>
-                                    15 March 2020
-                                </small>
-                            </div>
-                            <h5 class="fw-bold titel-blog">How SEO Can Transform Your Business</h5>
-                            <p class="card-text">
-                                Some quick example text to build on the card title and make up the bulk of the
-                                card's content.
-                            </p>
-                            <a href="#" class="btn-read fw-bold">Read more &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 box" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card">
-                        <div class="position-relative">
-                            <img src="{{ asset('site-assets/images/test-img2.jpg') }}" class="card-img-top"
-                                alt="Teamwork">
-                            <span class="badge badge-custom">SEO, Marketing</span>
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-2">
-                                <img src="{{ asset('site-assets/images/test-img2.jpg') }}" class="rounded-circle me-2"
-                                    alt="Writer">
-                                <small class="text-muted">Writer</small>
-                                <small class="text-muted1 ms-auto">
-                                    <i class="bi bi-calendar"></i>
-                                    15 March 2020
-                                </small>
-                            </div>
-                            <h5 class="fw-bold titel-blog">How SEO Can Transform Your Business</h5>
-                            <p class="card-text">
-                                Some quick example text to build on the card title and make up the bulk of the
-                                card's content.
-                            </p>
-                            <a href="#" class="btn-read fw-bold">Read more &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 box" data-aos="fade-up" data-aos-delay="400">
-                    <div class="card">
-                        <div class="position-relative">
-                            <img src="{{ asset('site-assets/images/test-img2.jpg') }}" class="card-img-top"
-                                alt="Office Setup">
-                            <span class="badge badge-custom">Business</span>
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-2">
-                                <img src="{{ asset('site-assets/images/test-img2.jpg') }}"
-                                    class="rounded-circle small-avatar me-2" alt="Admin">
-                                <small class="text-muted">Admin</small>
-                                <small class="text-muted1 ms-auto">
-                                    <i class="bi bi-calendar"></i>
-                                    15 March 2020
-                                </small>
-                            </div>
-                            <h5 class="fw-bold titel-blog">Optimize Your Website for Better Performance</h5>
-                            <p class="card-text">
-                                Some quick example text to build on the card title and make up the bulk of the
-                                card's content.
-                            </p>
-                            <a href="#" class="btn-read fw-bold">Read more &rarr;</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -668,75 +565,24 @@
                         </div>
 
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="row tab">
-                                    <div class="col-lg-12">
-                                        <img class="mb-4" src="{{ asset('site-assets/images/feadback/revpic1.webp') }}"
-                                            alt="pic1">
-                                        <h5> Alexandra Smith</h5>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <p class="mx-auto">
-                                            "The team delivered the project on time, and the quality was beyond
-                                            expectations. Their attention to detail was outstanding, and their
-                                            communication throughout the process was top-notch. We truly felt supported
-                                            every step
-                                            of the way."</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row tab">
-                                    <div class="col-lg-12">
-                                        <img class="mb-4" src="{{ asset('site-assets/images/feadback/revpic2.webp') }}"
-                                            alt="pic2">
-                                        <h5>Johanna Richardson</h5>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <p class="mx-auto">"Working with this company was a fantastic
-                                            experience! They took the time to
-                                            understand our unique requirements and provided a custom solution that
-                                            not only
-                                            met but exceeded our expectations. Their professionalism was evident
-                                            from start
-                                            to finish."</p>
+                            @foreach ($feedbacks as $feedback)
+                                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                    <div class="row tab">
+                                        <div class="col-lg-12">
+                                            <img class="mb-4" src="{{ asset($feedback->image) }}" alt="pic1">
+                                            <h5> {{ $feedback->name }}</h5>
+                                        </div>
+                                        <div class="col-lg-12">
+
+                                            <p class="mx-auto">
+                                                {!! $feedback->content !!}
+                                            </p>
+
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row tab">
-                                    <div class="col-lg-12">
-                                        <img class="mb-4" src="{{ asset('site-assets/images/feadback/revpic3.webp') }}"
-                                            alt="pic3">
-                                        <h5> Christina Hawakins</h5>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <p class="mx-auto">"Excellent service from start to finish! The
-                                            developers were highly skilled,
-                                            responsive, and proactive in addressing our needs. They ensured
-                                            everything was
-                                            tailored specifically to our requirements and kept us informed
-                                            throughout the project."</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row tab">
-                                    <div class="col-lg-12">
-                                        <img class="mb-4" src="{{ asset('site-assets/images/feadback/revpic4.webp') }}"
-                                            alt="pic4">
-                                        <h5> Andres Johnson</h5>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <p class="mx-auto">"I'm thoroughly impressed by the professionalism
-                                            and technical expertise of the
-                                            team. They tackled our complex issues with ease, providing solutions
-                                            that were
-                                            both efficient and effective. They truly went above and beyond to ensure
-                                            everything was perfect."</p>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
+
                         </div>
                     </div>
                 </div>

@@ -45,97 +45,19 @@
                     in iste officiis commodi quidem hic quas.</p>
             </div>
             <div class="row d-flex align-items-stretch project-item">
-                <!-- Project 1 -->
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-card">
-                        <div class="overlay"></div>
-                        <img src="{{ asset('site-assets/images/test-img2.jpg') }}" alt="Project 1">
-                        <div class="card-body">
-                            <h5>Project One</h5>
-                            <p>A brief description of the first project and its key features.</p>
-                            <a href="soon.html" class="btn btn-primary">Learn More</a>
+                @foreach ($projects as $project)
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-card">
+                            <div class="overlay"></div>
+                            <img src="{{ asset($project->image) }}" alt="Project 1">
+                            <div class="card-body">
+                                <h5>{{ $project->name }}</h5>
+                                <p>{{ $project->description }}</p>
+                                <a href="{{ route('webura.soon') }}" class="btn btn-primary">Learn More</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-card">
-                        <div class="overlay"></div>
-                        <img src="{{ asset('site-assets/images/test-img2.jpg') }}" alt="Project 1">
-                        <div class="card-body">
-                            <h5>Project One</h5>
-                            <p>A brief description of the first project and its key features.</p>
-                            <a href="soon.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-card">
-                        <div class="overlay"></div>
-                        <img src="{{ asset('site-assets/images/test-img2.jpg') }}" alt="Project 1">
-                        <div class="card-body">
-                            <h5>Project One</h5>
-                            <p>A brief description of the first project and its key features.</p>
-                            <a href="soon.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-card">
-                        <div class="overlay"></div>
-                        <img src="{{ asset('site-assets/images/test-img2.jpg') }}" alt="Project 1">
-                        <div class="card-body">
-                            <h5>Project One</h5>
-                            <p>A brief description of the first project and its key features.</p>
-                            <a href="soon.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-card">
-                        <div class="overlay"></div>
-                        <img src="{{ asset('site-assets/images/test-img2.jpg') }}" alt="Project 1">
-                        <div class="card-body">
-                            <h5>Project One</h5>
-                            <p>A brief description of the first project and its key features.</p>
-                            <a href="soon.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-card">
-                        <div class="overlay"></div>
-                        <img src="{{ asset('site-assets/images/test-img2.jpg') }}" alt="Project 1">
-                        <div class="card-body">
-                            <h5>Project One</h5>
-                            <p>A brief description of the first project and its key features.</p>
-                            <a href="soon.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-card">
-                        <div class="overlay"></div>
-                        <img src="{{ asset('site-assets/images/test-img2.jpg') }}" alt="Project 1">
-                        <div class="card-body">
-                            <h5>Project One</h5>
-                            <p>A brief description of the first project and its key features.</p>
-                            <a href="soon.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-card">
-                        <div class="overlay"></div>
-                        <img src="{{ asset('site-assets/images/test-img2.jpg') }}" alt="Project 1">
-                        <div class="card-body">
-                            <h5>Project One</h5>
-                            <p>A brief description of the first project and its key features.</p>
-                            <a href="soon.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-
-
+                @endforeach
             </div>
         </div>
     </section>

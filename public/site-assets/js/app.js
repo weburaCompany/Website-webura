@@ -1,4 +1,8 @@
+import { Collapse, Ripple, initMDB } from "mdb-ui-kit";
+
 // Animation logic
+
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -13,7 +17,7 @@ const observer = new IntersectionObserver(
 const featureCards = document.querySelectorAll(".feature-card");
 featureCards.forEach((card) => observer.observe(card));
 
-import { Collapse, Ripple, initMDB } from "mdb-ui-kit";
+
 
 initMDB({ Collapse, Ripple });
 

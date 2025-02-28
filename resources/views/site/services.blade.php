@@ -61,7 +61,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="soon.html" class="btn-read fw-bold">Read more &rarr;</a>
+                            <a href="{{ route('webura.soon') }}" class="btn-read fw-bold">Read more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="soon.html" class="btn-read fw-bold">Read more &rarr;</a>
+                            <a href="{{ route('webura.soon') }}" class="btn-read fw-bold">Read more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="soon.html" class="btn-read fw-bold">Read more &rarr;</a>
+                            <a href="{{ route('webura.soon') }}" class="btn-read fw-bold">Read more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="soon.html" class="btn-read fw-bold">Read more &rarr;</a>
+                            <a href="{{ route('webura.soon') }}" class="btn-read fw-bold">Read more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="soon.html" class="btn-read fw-bold">Read more &rarr;</a>
+                            <a href="{{ route('webura.soon') }}" class="btn-read fw-bold">Read more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="soon.html" class="btn-read fw-bold">Read more &rarr;</a>
+                            <a href="{{ route('webura.soon') }}" class="btn-read fw-bold">Read more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -157,7 +157,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="soon.html" class="btn-read fw-bold">Read more &rarr;</a>
+                            <a href="{{ route('webura.soon') }}" class="btn-read fw-bold">Read more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -173,7 +173,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="soon.html" class="btn-read fw-bold">Read more &rarr;</a>
+                            <a href="{{ route('webura.soon') }}" class="btn-read fw-bold">Read more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -189,7 +189,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="soon.html" class="btn-read fw-bold">Read more &rarr;</a>
+                            <a href="{{ route('webura.soon') }}" class="btn-read fw-bold">Read more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -205,7 +205,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="soon.html" class="btn-read fw-bold">Read more &rarr;</a>
+                            <a href="{{ route('webura.soon') }}" class="btn-read fw-bold">Read more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -221,7 +221,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="soon.html" class="btn-read fw-bold">Read more &rarr;</a>
+                            <a href="{{ route('webura.soon') }}" class="btn-read fw-bold">Read more &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -237,7 +237,7 @@
                             <p>
                                 Design and develop innovative websites that meet your needs.
                             </p>
-                            <a href="soon.html" class="btn-read fw-bold">Read more &rarr;</a>
+                            <a href="{{ route('webura.soon') }}" class="btn-read fw-bold">Read more &rarr;</a>
                         </div>
                     </div>
                 </div>

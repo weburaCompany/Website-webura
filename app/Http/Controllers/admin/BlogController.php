@@ -34,7 +34,7 @@ class BlogController extends Controller
             'title' => 'required',
             'content' => 'required',
             'image' => 'required|image',
-            'publishDate' => 'required|date',
+            'publishDate' => 'required|date|after:' . now(),
         ]);
         $image  = $request->file('image')->store('uploads/blogs', 'custom');
         Blog::create([

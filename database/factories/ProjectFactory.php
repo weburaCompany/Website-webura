@@ -17,7 +17,10 @@ class ProjectFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->words(2, true),
+            'image' => 'http://127.0.0.1:8000/uploads/projects/MjZ4jrdf8wCjgP929obClNlYsIH2LweMsLHjLtSq.jpg',
+            'description' => fake()->words(6, true),
+            'link' => 'https://www.facebook.com/',
         ];
     }
 }

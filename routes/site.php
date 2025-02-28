@@ -17,4 +17,5 @@ Route::prefix('webaura')->name('webura.')->group(function () {
     Route::get('blog', [SiteController::class, 'blog'])->name('blog');
     Route::get('blog/post/{id}', [SiteController::class, 'single_blog'])->name('single-blog');
     Route::get('contact-us', [SiteController::class, 'contact_us'])->name('contact-us');
+    Route::get('soon', [SiteController::class, 'soon'])->name('soon');
 });
