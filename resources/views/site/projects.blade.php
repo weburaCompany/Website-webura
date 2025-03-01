@@ -52,7 +52,7 @@
                             <img src="{{ asset($project->image) }}" alt="Project 1">
                             <div class="card-body">
                                 <h5>{{ $project->name }}</h5>
-                                <p>{{ $project->description }}</p>
+                                <p>{!! $project->description !!}</p>
                                 <a href="{{ route('webura.soon') }}" class="btn btn-primary">Learn More</a>
                             </div>
                         </div>

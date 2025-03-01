@@ -32,6 +32,7 @@ class BlogController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'subtitle' => 'required',
             'content' => 'required',
             'image' => 'required|image',
             'publishDate' => 'required|date|after:' . now(),
@@ -39,6 +40,7 @@ class BlogController extends Controller
         $image  = $request->file('image')->store('uploads/blogs', 'custom');
         Blog::create([
             'title' => $request->title,
+            'subtitle' => $request->subtitle,
             'image' => $image,
             'content' => $request->content,
             'publish_date' => $request->publishDate,
@@ -71,6 +73,7 @@ class BlogController extends Controller
         $blog = Blog::findOrFail($id);
         $request->validate([
             'title' => 'required',
+            'subtitle' => 'required',
             'content' => 'required',
             'image' => 'nullable|image',
             'publishDate' => 'required|date',
@@ -81,9 +84,10 @@ class BlogController extends Controller
         }
         $blog->update([
             'title' => $request->title,
+            'subtitle' => $request->subtitle,
             'image' => $image,
             'content' => $request->content,
-            'publish_date' => $request->publishDate,
+            'publish_date' => $request->publishDate
         ]);
         return redirect()->route('admin.blogs.index')->with(['msg' => 'Blog updated.', 'type' => 'info']);
     }

@@ -384,32 +384,7 @@
 
                 <div class="col-sm-12 col-md-12 col-lg-6" data-aos="fade-left" data-aos-delay="100">
                     <div class="contact-card">
-                        <form>
-                            <div class="row  g-3">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Full Name">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Email Address">
-                                </div>
-                            </div>
-                            <div class="row g-3 mt-3">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Phone Number">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Your Company Name">
-                                </div>
-                            </div>
-                            <div class="mt-3">
-
-                                <textarea class="form-control" rows="4" placeholder="Let us know what you need"></textarea>
-                            </div>
-                            <div class="d-grid mt-3">
-                                <!-- Submit Button -->
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        </form>
+                        @include('site.parts.contact')
                     </div>
                 </div>
     </section>

@@ -64,40 +64,70 @@
 
     <section class="contact" data-aos="fade-up">
         <div class="container">
+            @if (session('msg'))
+                <div class="alert alert-{{ session('type') }}">
+                    <h2>{{ session('msg') }}</h2>
+                </div>
+            @endif
             <div class="row g-5">
                 <div class="contact-form">
                     <h3 class="form-title">Let's Connect!</h3>
                     <p class="form-subtitle">Send us a message, and we'll promptly discuss your project with you.</p>
-                    <form>
+                    <form action="{{ route('webura.contact-data') }}" method="POST">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <i class="fas fa-user"></i>
-                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                    <input type="text" name="name" id="name" value="{{ old('name') }}"
+                                        class="form-control @error('name') is-invalid @enderror" placeholder="Your Name"
+                                        required>
+                                    @error('name')
+                                        <small class="invalid-feedback">{{ $message }}</small>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <i class="fas fa-envelope"></i>
-                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                    <input type="email" name="email" id="email" value="{{ old('email') }}"
+                                        class="form-control @error('email') is-invalid @enderror" placeholder="Your Email"
+                                        required>
+                                    @error('email')
+                                        <small class="invalid-feedback">{{ $message }}</small>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <i class="fas fa-phone"></i>
-                                    <input type="tel" class="form-control" placeholder="Your Phone No." required>
+                                    <input type="tel" name="phone" id="phone" value="{{ old('phone') }}"
+                                        class="form-control @error('phone') is-invalid @enderror"
+                                        placeholder="Your Phone No." required>
+                                    @error('phone')
+                                        <small class="invalid-feedback">{{ $message }}</small>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <i class="fas fa-building"></i>
-                                    <input type="text" class="form-control" placeholder="Your Company Name">
+                                    <input type="text" name="company" id="company" value="{{ old('company') }}"
+                                        class="form-control @error('company') is-invalid @enderror"
+                                        placeholder="Your Company Name">
+                                    @error('company')
+                                        <small class="invalid-feedback">{{ $message }}</small>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
                                     <i class="fas fa-message" style="top: 25px;"></i>
-                                    <textarea class="form-control" style="padding-bottom: 80px;" placeholder="How can we help you?" required></textarea>
+                                    <textarea name="message" id="message" class="form-control @error('message') is-invalid @enderror"
+                                        style="padding-bottom: 80px;" placeholder="How can we help you?" required>{{ old('message') }}</textarea>
+                                    @error('message')
+                                        <small class="invalid-feedback">{{ $message }}</small>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-12">

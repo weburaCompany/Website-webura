@@ -20,6 +20,17 @@
         </div>
 
         <div class="mb-2">
+            <label for="subtitle">Subtitle</label>
+            <input type="text" name="subtitle" id="subtitle" placeholder="Subtitle" value="{{ old('subtitle') }}"
+                class="form-control @error('subtitle')
+            is-invalid
+        @enderror">
+            @error('subtitle')
+                <small class="invalid-feedback">{{ $message }}</small>
+            @enderror
+        </div>
+
+        <div class="mb-2">
             <label for="content">Content</label>
             <textarea name="content" id="content" placeholder="Content"
                 class="form-control @error('content')

@@ -46,7 +46,7 @@
 @endsection
 
 
-@section('scripts')
+{{-- @section('scripts')
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/7.0.1/tinymce.min.js"></script>
     <script>
@@ -57,4 +57,4 @@
     </script>
 
 
-@endsection
+@endsection --}}

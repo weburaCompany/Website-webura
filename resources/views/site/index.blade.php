@@ -4,24 +4,24 @@
 @section('content')
 
     <!-- <header>
-                                                            <div class="overlay"></div>
-                                                            <div class="video-header">
-                                                                <video src="video/2.mp4" muted loop autoplay></video>
-                                                            </div>
-                                                            <div class="header-data" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="500">
-                                                                <div class="container">
-                                                                    <h2>Welcome To <span>Webura</span></h2>
-                                                                    <p>
-                                                                        At Webura, we specialize in turning ideas into impactful results. From programming and
-                                                                        design to marketing and advertising, we provide innovative solutions that help your business
-                                                                        thrive Founded in 2022, Webura is a company built on the belief that great ideas deserve exceptional
-                                                                        execution.
-                                                                    </p>
-                                                                    <a data-mdb-ripple-init class="btn btn-primary mt-2" href="#about" role="button">Let’s Collaborate</a>
-                                                                </div>
-                                                            </div>
-                                                            </div>
-                                                        </header> -->
+                                                                            <div class="overlay"></div>
+                                                                            <div class="video-header">
+                                                                                <video src="video/2.mp4" muted loop autoplay></video>
+                                                                            </div>
+                                                                            <div class="header-data" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="500">
+                                                                                <div class="container">
+                                                                                    <h2>Welcome To <span>Webura</span></h2>
+                                                                                    <p>
+                                                                                        At Webura, we specialize in turning ideas into impactful results. From programming and
+                                                                                        design to marketing and advertising, we provide innovative solutions that help your business
+                                                                                        thrive Founded in 2022, Webura is a company built on the belief that great ideas deserve exceptional
+                                                                                        execution.
+                                                                                    </p>
+                                                                                    <a data-mdb-ripple-init class="btn btn-primary mt-2" href="#about" role="button">Let’s Collaborate</a>
+                                                                                </div>
+                                                                            </div>
+                                                                            </div>
+                                                                        </header> -->
 
     <header>
         <div class="overlay"></div>
@@ -513,9 +513,8 @@
                         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 box" data-aos="fade-up" data-aos-delay="100">
                             <div class="card">
                                 <div class="position-relative">
-                                    <img src="{{ asset('site-assets/images/test-img2.jpg') }}" class="card-img-top"
-                                        alt="Meeting">
-                                    <span class="badge badge-custom">SEO, Analytics</span>
+                                    <img src="{{ asset($blog->image) }}" class="card-img-top" alt="Meeting">
+                                    {{-- <span class="badge badge-custom">SEO, Analytics</span> --}}
                                 </div>
                                 <div class="card-body">
                                     <div class="d-flex align-items-center mb-2">
@@ -524,15 +523,15 @@
                                         <small class="text-muted me-2">Admin</small>
                                         <small class="text-muted1 ms-auto">
                                             <i class="bi bi-calendar me-1"></i>
-                                            {{ $blog->publish_date }}
+                                            {{ $publishDate->format('F d, Y') }}
                                         </small>
                                     </div>
-                                    <h5 class="fw-bold titel-blog">The Power of Social Media Marketing</h5>
+                                    <h5 class="fw-bold titel-blog">{{ $blog->title }}</h5>
                                     <p class="card-text">
-                                        Some quick example text to build on the card title and make up the bulk of the
-                                        card's content.
+                                        {{ $blog->subtitle }}
                                     </p>
-                                    <a href="#" class="btn-read fw-bold">Read more &rarr;</a>
+                                    <a href="{{ route('webura.single-blog', $blog->id) }}" class="btn-read fw-bold">Read
+                                        more &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -545,50 +544,7 @@
     </section>
 
     <!-- FeadBack -->
-    <section class="feedback" data-aos="fade-up">
-        <div class="container py-5">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-12 text-center">
-                    <h2 class="feedback-info">Trusted Feedback</h2>
-                </div>
-                <div class="col-lg-12">
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-                                aria-label="Slide 4"></button>
-                        </div>
-
-                        <div class="carousel-inner">
-                            @foreach ($feedbacks as $feedback)
-                                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                                    <div class="row tab">
-                                        <div class="col-lg-12">
-                                            <img class="mb-4" src="{{ asset($feedback->image) }}" alt="pic1">
-                                            <h5> {{ $feedback->name }}</h5>
-                                        </div>
-                                        <div class="col-lg-12">
-
-                                            <p class="mx-auto">
-                                                {!! $feedback->content !!}
-                                            </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('site.parts.feedbacks')
 
     <!-- ---------contact-------- -->
     <section class="contact-section">
@@ -614,31 +570,7 @@
 
                 <div class="col-sm-12 col-md-12 col-lg-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="contact-card">
-                        <form>
-                            <div class="row  g-3">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Full Name">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Email Address">
-                                </div>
-                            </div>
-                            <div class="row g-3 mt-3">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Phone Number">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Your Company Name">
-                                </div>
-                            </div>
-                            <div class="mt-3">
-
-                                <textarea class="form-control" rows="4" placeholder="Tell us about your project or inquiry"></textarea>
-                            </div>
-                            <div class="d-grid mt-3">
-                                <button type="submit" class="btn btn-primary">Send Message or Let’s Get Started</button>
-                            </div>
-                        </form>
+                        @include('site.parts.contact')
                     </div>
                 </div>
     </section>

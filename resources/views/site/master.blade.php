@@ -222,7 +222,7 @@
         <!-- Copyright -->
         <div class="footer-end text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
             © 2024 Copyright:
-            <a class="text-reset fw-bold" href="">Webura.All Rights Reserved</a>
+            <a class="text-reset fw-bold" href="{{ route('webura.index') }}">Webura. All Rights Reserved</a>
         </div>
         <!-- Copyright -->
     </footer>

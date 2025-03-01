@@ -58,7 +58,7 @@
 
                     </p>
 
-                    <button class="animated-button">
+                    {{-- <button class="animated-button">
                         <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
                             <path
                                 d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
@@ -71,7 +71,7 @@
                                 d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
                             </path>
                         </svg>
-                    </button>
+                    </button> --}}
                 </div>
 
                 <div class="col-sm-12 col-md-12 col-lg-6 text-center" data-aos="fade-left">
@@ -92,7 +92,7 @@
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <h3 class="display-4 fw-bold mb-4" data-aos="fade-up">We're here to help</h3>
-                    <div class="search-container" data-aos="fade-up" data-aos-delay="200">
+                    {{-- <div class="search-container" data-aos="fade-up" data-aos-delay="200">
                         <input type="text" class="search-input" placeholder="Start typing your question here...">
                         <button class="search-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
@@ -101,7 +101,7 @@
                                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                             </svg>
                         </button>
-                    </div>
+                    </div> --}}
                 </div>
 
             </div>

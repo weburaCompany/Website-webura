@@ -6,9 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Feedback;
 use App\Models\Project;
+use App\Models\User;
+use App\Notifications\NewContact;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use phpDocumentor\Reflection\Types\Boolean;
 
 class SiteController extends Controller
 {
@@ -44,19 +45,22 @@ class SiteController extends Controller
 
     public function team()
     {
-        return view('site.team');
+        $feedbacks = Feedback::orderBy('id', 'desc')->limit(4)->get();
+        return view('site.team', compact('feedbacks'));
     }
 
     public function blog()
     {
-        $blogs = Blog::latest('id')->take(3)->get();
-        return view('site.blog', compact('blogs'));
+        $blogs = Blog::orderBy('publish_date', 'DESC')->limit(3)->get();
+        $blogs2 = Blog::orderBy('publish_date', 'DESC')->limit(3)->offset(3)->get();
+        return view('site.blog', compact('blogs', 'blogs2'));
     }
 
     public function single_blog($blogId)
     {
         $blog = Blog::findOrFail($blogId);
-        return view('site.blog-details', compact('blog'));
+        $blogPublishDate = Carbon::parse($blog->publish_date);
+        return view('site.blog-details', compact('blog', 'blogPublishDate'));
     }
 
     public function contact_us()
@@ -64,7 +68,24 @@ class SiteController extends Controller
         return view('site.contact-us');
     }
 
-    public function soon() {
+    public function soon()
+    {
         return view('site.soon');
+    }
+
+    public function contact_data(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'phone' => 'required|string',
+            'company' => 'required|string',
+            'message' => 'required|string',
+        ]);
+        $admins = User::all();
+        foreach ($admins as $admin) {
+            $admin->notify(new NewContact($request->name, $request->email, $request->phone, $request->company, $request->message));
+        }
+        return redirect()->back()->with(['msg' => 'We were notified of your message and we\'ll respond as soon as possible! ', 'type' => 'info']);
     }
 }

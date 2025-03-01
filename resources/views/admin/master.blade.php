@@ -288,8 +288,11 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('admin-assets/js/sb-admin-2.min.js') }}"></script>
+    <script>
+        window.authUserId = @json(auth()->id());
+    </script>
+    @vite('resources/js/app.js')
     @yield('scripts')
-
 </body>
 
 </html>

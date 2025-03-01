@@ -35,12 +35,12 @@ class AdminController extends Controller
             'email' => 'required|email|unique:users',
             'password' => [
                 'required',
-                Password::min(8)
-                    ->letters()
-                    ->mixedCase()
-                    ->numbers()
-                    ->symbols()
-                    ->uncompromised(),
+                // Password::min(8)
+                //     ->letters()
+                //     ->mixedCase()
+                //     ->numbers()
+                //     ->symbols()
+                //     ->uncompromised(),
                 'string',
                 'confirmed'
             ]
