@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
+use Illuminate\Notifications\DatabaseNotification;
 
 class AdminController extends Controller
 {
@@ -90,5 +92,10 @@ class AdminController extends Controller
         $admin = User::Find($id);
         $admin->delete();
         return redirect()->route('admin.admins.index')->with(['msg' => 'Admin deleted.', 'type' => 'success']);
+    }
+
+    public function notifications()
+    {
+        return view('admin.notifications.index');
     }
 }

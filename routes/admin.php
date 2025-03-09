@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->name('admin.')->middleware('auth:admin')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('index');
+    Route::get('notifications', [AdminController::class, 'notifications'])->name('notifications');
     Route::resource('admins', AdminController::class);
     Route::resource('projects', ProjectController::class);
     Route::resource('blogs', BlogController::class);
