@@ -96,6 +96,16 @@ class AdminController extends Controller
 
     public function notifications()
     {
-        return view('admin.notifications.index');
+        $notifications = DatabaseNotification::where('notifiable_id', Auth::id())
+            ->orderBy('created_at', 'desc')
+            ->paginate(5);
+        return view('admin.notifications.index', compact('notifications'));
+    }
+
+    public function view_notification_message($id)
+    {
+        $notification = DatabaseNotification::find($id);
+        $notification->markAsRead();
+        return view('admin.notifications.view-noti-message', compact('notification'));
     }
 }

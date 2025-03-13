@@ -91,7 +91,7 @@
                                 <i class="fas fa-bell fa-fw"></i>
                                 <!-- Counter - Alerts -->
                                 <span
-                                    class="badge badge-danger badge-counter">{{ auth()->user()->unreadnotifications->count() }}+</span>
+                                    class="badge badge-danger badge-counter">({{ auth()->user()->unreadnotifications->count() }})</span>
                             </a>
 
                         </li>

@@ -15,6 +15,7 @@ Route::prefix('admin')->name('admin.')->middleware('auth:admin')->group(function
     Route::resource('projects', ProjectController::class);
     Route::resource('blogs', BlogController::class);
     Route::resource('feedbacks', FeedbackController::class);
+    Route::get('notifications/view-notification-message/{id}', [AdminController::class, 'view_notification_message'])->name('view-notification-message');
 });
 
 Route::prefix('auth')->name('auth.')->middleware('auth:admin')->group(function () {
